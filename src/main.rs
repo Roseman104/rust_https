@@ -2,8 +2,9 @@ use reqwest;
 use sha1::{Digest, Sha1};
 use hex;
 
+// tasty chatgpt code. 
 fn main() {
-    let input_string = "password"; // Replace with the string you want to hash
+    let input_string = "12345";
     
     let sha1_hash = sha1_string(input_string);
     println!("SHA-1 hash: {} of: \"{}\"", sha1_hash, &input_string);
@@ -15,7 +16,7 @@ fn main() {
 }
 
 async fn check_hash(sha1_hash: &str) -> Result<(), Box<dyn std::error::Error>> {
-    let hash_prefix = &sha1_hash[..5];
+    let hash_prefix = &sha1_hash[..5]; // take the first 5 characters of the hash so its still a super secret hash
     let api_url = format!("https://api.pwnedpasswords.com/range/{}", hash_prefix);
 
     let response = reqwest::get(&api_url).await?.text().await?;
