@@ -40,6 +40,8 @@ I prefer this.
 
 `let input_string: &str = "password";`
 
+Currently static with no real reason to take in input as its mostly a proof of concept for me. Change as necessary. 
+
 Should return the URL for the page.
 
 Sha1 hash and the clear text
