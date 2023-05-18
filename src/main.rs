@@ -1,13 +1,22 @@
+use std::path::Display;
+
 use reqwest;
 use sha1::{Digest, Sha1};
 use hex;
 
 // tasty chatgpt code. 
 fn main() {
-    let input_string = "12345";
+    let input_string: &str = "12345";
     
-    let sha1_hash = sha1_string(input_string);
-    println!("SHA-1 hash: {} of: \"{}\"", sha1_hash, &input_string);
+    let sha1_hash: String = sha1_string(input_string);
+
+    let display_sha: String = sha1_hash.to_uppercase();
+
+    let print_sha: String = display_sha.clone();
+
+    println!("https://api.pwnedpasswords.com/range/{}", print_sha);
+
+    println!("SHA-1 hash: {} of: \"{}\"", &display_sha, &input_string);
 
 
     if let Err(err) = tokio::runtime::Runtime::new().unwrap().block_on(check_hash(&sha1_hash)) {
@@ -22,7 +31,7 @@ async fn check_hash(sha1_hash: &str) -> Result<(), Box<dyn std::error::Error>> {
     let response = reqwest::get(&api_url).await?.text().await?;
     let lines: Vec<&str> = response.lines().collect();
 
-    let suffix = &sha1_hash[5..].to_uppercase();
+    let suffix: &String = &sha1_hash[5..].to_uppercase();
     let mut found = false;
 
     for line in lines {
