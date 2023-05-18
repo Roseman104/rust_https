@@ -23,7 +23,7 @@ Copy the contents of the main.rs file to your main and edit the cargo.toml.
 
 Alternatively run:
 
-`cargo add reqwest` /br
-`cargo add sha1`
-`cargo add tokio`
-`cargo add hex`
+`cargo add reqwest`
+  `cargo add sha1`
+  `cargo add tokio`
+  `cargo add hex`
