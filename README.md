@@ -38,7 +38,7 @@ I prefer this.
 
 > Line 7
 
-'let input_string: &str = "password";'
+`let input_string: &str = "password";`
 
 Should return the URL for the page.
 
