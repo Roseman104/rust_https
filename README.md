@@ -14,7 +14,7 @@ Using this project to learn more about Rust programming, http request and securi
 
 Create directory where ever you want as long as rust is installed. 
 
-instaide of the directory you want the project to be created:
+inside of the directory you want the project to be created:
 `cargo new project_name_here`
 
 This will get Cargo to make a project and do some house keeping like make a gitignore so you don't inadvertenly try to post executables and so forth to github. 
@@ -24,6 +24,11 @@ Copy the contents of the main.rs file to your main and edit the cargo.toml.
 Alternatively run:
 
 `cargo add reqwest`
-  `cargo add sha1`
-  `cargo add tokio`
-  `cargo add hex`
+
+`cargo add sha1`
+
+`cargo add tokio`
+
+`cargo add hex`
+
+I prefer this. 
