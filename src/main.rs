@@ -1,5 +1,3 @@
-use std::path::Display;
-
 use reqwest;
 use sha1::{Digest, Sha1};
 use hex;
