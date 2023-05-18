@@ -32,3 +32,12 @@ Alternatively run:
 `cargo add hex`
 
 I prefer this. 
+
+
+#### Return
+
+Should return the URL for the page.
+
+Sha1 hash and the clear text
+
+How many times if any it has made it to the Have I been Pwned DB. 
