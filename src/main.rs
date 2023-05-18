@@ -4,7 +4,7 @@ use hex;
 
 // tasty chatgpt code. 
 fn main() {
-    let input_string: &str = "12345";
+    let input_string: &str = "password";
     
     let sha1_hash: String = sha1_string(input_string);
 
