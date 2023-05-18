@@ -36,6 +36,10 @@ I prefer this.
 
 #### Return
 
+> Line 7
+
+'let input_string: &str = "password";'
+
 Should return the URL for the page.
 
 Sha1 hash and the clear text
