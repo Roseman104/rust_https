@@ -17,7 +17,7 @@ Create directory where ever you want as long as rust is installed.
 inside of the directory you want the project to be created:
 `cargo new project_name_here`
 
-This will get Cargo to make a project and do some house keeping like make a gitignore so you don't inadvertenly try to post executables and so forth to github. 
+This will get Cargo to make a project and do some house keeping like make a gitignore so you don't inadvertently try to post executables and so forth to github. 
 
 Copy the contents of the main.rs file to your main and edit the cargo.toml.
 
